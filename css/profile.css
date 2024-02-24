@@ -1,0 +1,68 @@
+@import url('./global.css');
+
+.profileContainer{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.myprfile_imahe{
+    background-image: url('../assets/images/profileImage.jpeg');
+    background-size: cover;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 1px solid var(--primary-clr);
+}
+.profile_heading{
+    margin-left: 3rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.profile_info{
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+#profile_name{
+font-weight: 900;
+text-transform: capitalize;
+font-size: 2rem;
+
+}
+.operateur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.orange{
+    background-color: orangered;
+}
+.mnt{
+background-color: orange;
+}
+.acount_del_support{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+p{
+    font-weight: 600;
+}
+span{
+    font-weight: 400;
+}
+.btn4{
+    margin: 1rem 3rem;
+
+}
+.profile_header{
+    display: flex;
+    justify-content: space-between;
+}

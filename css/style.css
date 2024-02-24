@@ -1,0 +1,57 @@
+@import url("./global.css");
+
+  .statisticTopSection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+  .statisticscards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+  }
+.statisticscard{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 1rem;
+    background-color: var(--secondary-clr);
+    box-shadow: var(--box-shadow-2);
+    border-radius: 5px;
+    color: var(--card-clr);
+}
+
+.statisticscard .cardtopSection{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+
+}
+.cardtopSection .cardSvg{
+    background-color:var(--card-svg-bg) ;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cardtopSection .cardTitle{
+    color: var(--card-clr);
+    font-weight: 700;
+}
+.cardtopSection svg{
+    color: var(--card-svg-clr);
+    transform: scale(.9);
+}
+.cardmainSection h1{
+    font-weight: 200;
+    color: #333;
+    }
+    .cardAnalyticsForTiquetes{
+        margin-right: .5rem;
+    }

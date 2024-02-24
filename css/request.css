@@ -1,0 +1,40 @@
+@import url("./global.css");
+
+ .table{
+    padding: 3rem;
+    width: 100%;
+    margin: 3rem;
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+ }
+ .tablecontainer{
+    padding: 3rem;
+    box-shadow: var(--box-shadow-1);
+ }
+ tr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%; 
+ }
+ tr td{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+ }
+ thead tr th{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+ }
+ tr{
+   border: 1px solid #CED4DA;
+
+ }

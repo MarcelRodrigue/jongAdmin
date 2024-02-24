@@ -1,0 +1,278 @@
+/*this file contains specific files*/
+/**/
+/*global variables like colors and paddings, to modify a color come here*/
+
+:root {
+    --primary-clr : #222e3c;
+    --secondary-clr : #fff; 
+     --box-shadow-1 : 10px 2px 2px #ddd2d2;
+     --box-shadow-2 : 2px 1.5px 1.5px #ddd2d2;
+     --box-shadow-3 : 10px 5px 5px #ddd2d2;
+     --gain-clr: #1cbb8c;
+     --lose-clr: #dc3545; 
+    --card-clr : #939ba2;
+    --card-svg-bg :#d3e2f7;
+    --card-svg-clr :#3b7ddd;
+    --brand-clr : rgb(231, 158, 23);
+    --border-radius : 5px ;
+
+/*nav bar colors*/
+    --active-link-bg-clr : #0e2947;
+    --passive-link-clr : rgba(233,236,239,.5);
+    --nav-border-clr: #3b7ddd;
+    
+}
+/*global styles */
+.gain{
+    color: var(--gain-clr);
+}
+.danger{
+    color: var(--lose-clr);
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand-clr);
+    padding: 1rem;
+    color: var(--secondary-clr);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+.btn2{
+   background-color: var(--primary-clr);
+}
+.btn4{
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--active-link-bg-clr);
+    color: #fff;
+}
+.btn4 svg{
+    color: #fff;
+}
+.flex{
+    display: flex;
+}
+.show{
+
+display: block;
+}
+.hide{
+    display: none;
+}
+.btnGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+} 
+/* navigation styles*/
+
+.mainNavigation{
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+    font-size: .9rem;
+    }
+    .mainNavigation h1{
+        font-weight: 900;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+    .mainNavigation ul{
+        margin: 0;
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+        overflow: hidden;
+    
+        
+    }
+    .mainNavigation ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        cursor: pointer;
+    }
+    .mainNavigation ul li {
+        padding-left: 1rem;
+    }
+    .mainNavigation ul li a, svg {
+        color: var(--passive-link-clr);
+    }
+    .mainNavigation ul li svg {
+    transform: scale(.8);
+    }
+    /*main navigation styles on hover and active states,  youll notice the creation of an active class*/
+    
+    .mainNavigation ul li.active{
+        background-color: var(--active-link-bg-clr);
+        color: var(--secondary-clr);
+        padding: 1rem 0rem;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 1rem;
+        border-left: 3px solid var(--nav-border-clr);
+    
+    }
+    .mainNavigation ul li.active a{
+        color: var(--secondary-clr);
+    }
+    .mainNavigation ul li.active svg{
+        color: var(--secondary-clr);
+    }
+    .mainNavigation ul li:hover{
+        transition: .3s ease-in-out;
+        transform: translate(5px);
+        color: var(--secondary-clr);
+    }
+    .mainNavigation ul li:hover a{
+        color: var(--secondary-clr);
+    }
+    .mainNavigation ul li:hover svg{
+        color: var(--secondary-clr);
+    }
+    .mainNavigation ul li.active:hover{
+        transform: none;
+    }
+    
+    /*main section styles*/
+    .center{
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .between{
+        justify-content: space-between;
+    }
+    .around{
+        justify-content: space-around;
+    }
+    .container {
+    /*make body scroll independently from nav*/
+        overflow-y: auto;
+        height: 100vh;
+        background-color: #f5f7fb;
+      }
+    
+      .container header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primary-clr);
+        background-color: var(--secondary-clr);
+        padding: 1rem;
+        box-shadow: var(--box-shadow-1);
+    
+      }
+      .container header ul{
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+       
+      }
+      .container header ul li .notification{
+        background-color: red;
+        height: 1rem;
+        width: 1rem;
+        font-size: .5rem;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -.8rem;
+        margin-top: -1rem;
+    
+      }
+      .container header ul li.notificationArea{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .container header svg{
+        color: var(--primary-clr);
+      }
+      .container header .profilePic{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+    
+      }
+
+      .container header .profilePic img{
+        width: 2rem;
+        height: auto;
+    
+      }
+      .profilePic{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .profilePic img{
+        width: 2rem;
+        height: auto;
+    
+      }
+      .progress-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #007bff;
+        transition: width 0.6s ease;
+        border-radius: 11px;
+
+      }
+      .aprove{
+        background-color: var(--gain-clr);
+        }
+        .reject{
+        background-color: var(--lose-clr);
+        }
+      

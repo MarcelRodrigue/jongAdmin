@@ -1,0 +1,69 @@
+@import url("./global.css");
+.body{
+}
+.form1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: var(--border-radius);
+    width: 20rem;
+    height: auto;
+    padding: 2rem;
+    transform: scale(1.111);
+    border: 1px solid var(--primary-clr);
+
+
+}
+
+.form1 input{
+    padding: 1rem;
+    width: auto;
+    color: var(--primary-clr);
+    outline: none;
+    border-radius: var(--border-radius);
+    width: 100%;
+    border: 1px solid var(--primary-clr);
+
+
+}
+
+.form2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-clr);
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+
+}
+.form2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+    width: 100%;
+
+}
+.form2 ul li{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid var(--primary-clr);
+    color: var(--primary-clr);
+    width: 100%;
+}
+.form2 ul li span{
+    margin: 0rem 1rem;
+}
+.hide{
+    display: none;
+} 

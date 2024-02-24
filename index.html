@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/tiquet.css">
+    <script src="./js/routing.js"></script>
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+
+    <title>Jong Dashboard</title>
+</head>
+<body>
+<nav id="navigation" class="mainNavigation">
+<h1>Jong DashBoard</h1>
+        <!--her ill define the elememts for admin and barMan -->
+
+<ul>
+    <li class="active" id="dashboard">
+        <!--SubAdmin-->
+        <!--Admin-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders align-middle"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+        <a href="index.html">Dashboard</a>
+    </li>
+    <li id="tiquet">
+        <!--SubAdmin-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square align-middle"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+        <a href="./tiquet.html">Traiter Tiquet</a>
+    </li>
+    <li id="requette">
+        <!--SubAdmin-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-middle"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <a href="./requet.html">Traiter requette</a>
+    </li>
+    <li id="Historique">
+        <!--SubAdmin-->
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard align-middle me-2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+        <a href="#">Historique</a>
+    </li>
+    <li id="profile">
+        <!--SubAdmin-->
+        <!--Admin-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user align-middle"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <a href="#">Profile</a>
+    </li>
+    <li id="logout">
+        <!--SubAdmin-->
+        <!--Admin-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-in align-middle"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+
+        <a href="#">LogOut</a></li>
+
+</ul>
+</nav>
+<div class="container">
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu align-middle me-2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+
+        <ul>
+            <li class="notificationArea">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell align-middle me-2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <div class="notification">1</div>
+            </li>
+            <li class="profilePic">
+                <img src="./assets/images/profileImage.jpeg" alt="" srcset="">
+            </li>
+        </ul>
+
+    </header>
+    <div class="body" id="body">
+        <div class="statisticscardContainter">
+            <div class="statisticTopSection">
+                <div class="statisticscards">
+                    <div class="statisticscard">
+                        <div class="cardtopSection">
+                            <div class="cardTitle">
+                                Tiquet Traiter
+                            </div>
+                            <div class="cardSvg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock align-middle me-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                        </div>
+                        <div class="cardmainSection">
+                            <h1>234</h1>
+                        </div>
+                        <div class="cardbuttomSection">
+                            <p><span class="cardAnalyticsForTiquetes gain">-11%</span>par rapport a hier</p>
+                        </div>
+                    </div>
+                    <div class="statisticscard">
+                        <div class="cardtopSection">
+                            <div class="cardTitle">
+                                Gain
+                            </div>
+                            <div class="cardSvg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign align-middle me-2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            </div>
+                        </div>
+                        <div class="cardmainSection">
+                            <h1> <span>400</span> FCFA</h1>
+                        </div>
+                        <div class="cardbuttomSection">
+                            <p><span class="cardAnalyticsForTiquetes danger">-30%</span>par rapport a hier</p>
+                        </div>
+                    </div>
+                    <div class="statisticscard">
+                        <div class="cardtopSection">
+                            <div class="cardTitle">
+                                Argent Percu
+                            </div>
+                            <div class="cardSvg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock align-middle me-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                        </div>
+                        <div class="cardmainSection">
+                            <h1><span>4100</span> FCFA</h1>
+
+                        </div>
+                        <div class="cardbuttomSection">
+                            <p><span class="cardAnalyticsForTiquetes gain">+11%</span>par rapport a hier</p>
+                        </div>
+                    </div>
+                    <div class="statisticscard">
+                        <div class="cardtopSection">
+                            <div class="cardTitle">
+                                bouteil vendu
+                            </div>
+                            <div class="cardSvg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock align-middle me-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                        </div>
+                        <div class="cardmainSection">
+                            <h1>234</h1>
+                        </div>
+                        <div class="cardbuttomSection">
+                            <p><span class="cardAnalyticsForTiquetes gain">-11%</span>par rapport a hier</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chertjsgraph">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                      </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="./js/register.js"></script>
+<script>
+    protectRoute();
+</script>
+<script src="./js/charts.js"></script>
+
+
+</body>
+</html>
+
